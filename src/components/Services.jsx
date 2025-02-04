@@ -1,7 +1,9 @@
 import React from 'react';
 import { Search, UserCheck, MessageCircle, Crown } from 'lucide-react';
+import { useNavigate } from 'react-router';
 
 function Services() {
+    const navigate = useNavigate()
     return (
         <div className="min-h-screen bg-gray-50 pt-20">
             <div className="container mx-auto px-4 py-16">
@@ -81,7 +83,7 @@ function Services() {
                             <li>• Profile optimization</li>
                             <li>• Regular updates and feedback</li>
                         </ul>
-                        <button className="mt-6 w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-full transition-colors">
+                        <button onClick={() => navigate('/contact')} className="mt-6 w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-full transition-colors">
                             Contact Us
                         </button>
                     </div>
