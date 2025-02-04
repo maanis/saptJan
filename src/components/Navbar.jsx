@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Heart, Menu, X } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const menu = useRef()
 
     return (
         <nav className="fixed w-full h-[10vh] z-50 bg-white/45 backdrop-blur-sm shadow-md">
@@ -38,20 +39,12 @@ const Navbar = () => {
 
                 {/* Mobile Navigation */}
                 {isMenuOpen && (
-                    <div className="md:hidden py-4 border-t">
+                    <div className="md:hidden bg-zinc-200 absolute w-full  left-0 py-4 border-t">
                         <div className="flex flex-col space-y-4">
-                            <a href="#" className="text-gray-700 hover:text-rose-600 font-medium transition-colors">
-                                Home
-                            </a>
-                            <a href="#" className="text-gray-700 hover:text-rose-600 font-medium transition-colors">
-                                About
-                            </a>
-                            <a href="#" className="text-gray-700 hover:text-rose-600 font-medium transition-colors">
-                                Services
-                            </a>
-                            <a href="#" className="text-gray-700 hover:text-rose-600 font-medium transition-colors">
-                                Contact Us
-                            </a>
+                            <NavLink ref={menu} onClick={() => setIsMenuOpen(prev => !prev)} to={'/'} className={'text-zinc-950 w-full bg-zinc-300 p-3 flex justify-center text-xl hover:text-rose-600 font-semibold transition-colors'}>Home</NavLink>
+                            <NavLink ref={menu} onClick={() => setIsMenuOpen(prev => !prev)} to={'/about'} className={'text-zinc-950 w-full bg-zinc-300 p-3 flex justify-center text-xl hover:text-rose-600 font-semibold transition-colors'}>About</NavLink>
+                            <NavLink ref={menu} onClick={() => setIsMenuOpen(prev => !prev)} to={'/services'} className={'text-zinc-950 w-full bg-zinc-300 p-3 flex justify-center text-xl hover:text-rose-600 font-semibold transition-colors'}>Services</NavLink>
+                            <NavLink ref={menu} onClick={() => setIsMenuOpen(prev => !prev)} to={'/contact'} className={'text-zinc-950 w-full bg-zinc-300 p-3 flex justify-center text-xl hover:text-rose-600 font-semibold transition-colors'}>Contact Us</NavLink>
                             <button className="bg-rose-600 text-white px-6 py-2 rounded-full hover:bg-rose-700 transition-colors w-full">
                                 Register Now
                             </button>

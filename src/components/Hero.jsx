@@ -3,7 +3,7 @@ import { Heart, Search, Users, ArrowRight } from 'lucide-react';
 
 function Hero() {
     return (
-        <div className="relative h-screen lg:overflow-hidden">
+        <div className="relative  max-md:min-h-screen lg:overflow-hidden">
             {/* Background Image with Overlay */}
             <div
                 className="absolute inset-0 z-0"
