@@ -17,10 +17,10 @@ const Navbar = () => {
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
-                        {/* <NavLink to={'/'} className={'text-zinc-950 hover:text-rose-600 font-medium transition-colors'}>Home</NavLink>
+                        <NavLink to={'/'} className={'text-zinc-950 hover:text-rose-600 font-medium transition-colors'}>Home</NavLink>
                         <NavLink to={'/about'} className={'text-zinc-950 hover:text-rose-600 font-medium transition-colors'}>About</NavLink>
                         <NavLink to={'/services'} className={'text-zinc-950 hover:text-rose-600 font-medium transition-colors'}>Services</NavLink>
-                        <NavLink to={'/contact'} className={'text-zinc-950 hover:text-rose-600 font-medium transition-colors'}>Contact Us</NavLink> */}
+                        <NavLink to={'/contact'} className={'text-zinc-950 hover:text-rose-600 font-medium transition-colors'}>Contact Us</NavLink>
 
                         <button className="bg-rose-600 text-white px-6 py-2 rounded-full hover:bg-rose-700 transition-colors">
                             Register Now
